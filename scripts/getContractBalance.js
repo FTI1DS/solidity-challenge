@@ -12,9 +12,9 @@ async function getContractBalance(contractAddress) {
     console.log(response)
     const balanceInWei = response.data.result;
     const balanceInEther = ethers.formatEther(balanceInWei);
-    console.log(`Kontostand des Contracts: ${balanceInEther} ETH`);
+    console.log(`Balance of Contract: ${balanceInEther} ETH`);
   } catch (error) {
-    console.error(`Es ist ein Fehler aufgetreten: ${error.message}`);
+    console.error(`failure while execution: ${error.message}`);
   }
 }
 
